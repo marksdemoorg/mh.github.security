@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  mh.github.security.api:
+    image: ${DOCKER_REGISTRY-}mhgithubsecurity
+    build:
+      context: .
+      dockerfile: mh.github.security.api/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+    - securitydb
+
+  securitydb:
+    image: redis
