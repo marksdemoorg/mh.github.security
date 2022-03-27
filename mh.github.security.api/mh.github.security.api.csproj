@@ -20,9 +20,11 @@
     <None Remove="StackExchange.Redis" />
     <None Remove="Microsoft.Extensions.Caching.StackExchangeRedis" />
     <None Remove="Entity\GithubCodeScan\" />
+    <None Remove="Entity\GithubRepo\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entity\" />
     <Folder Include="Entity\GithubCodeScan\" />
+    <Folder Include="Entity\GithubRepo\" />
   </ItemGroup>
 </Project>
