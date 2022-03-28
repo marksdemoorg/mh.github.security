@@ -12,7 +12,7 @@ The marksdemoorg Github organization has been setup with starter workflows which
 
 Additionally, marksdemoorg has a webhook setup to POST code scanning alerts to a configured URL whenever code scan issues are detected. The Security Logging API (mh.github.security) application will receive the POST requests from the webhook and logs the data to a local data repository.
 
-There is a second API handler in the Security Logging API that will receive POST requests from an organization webhook when repositories are added. This would be leveraged to set security options on the new repo as well as creating an issue stating the change.
+There is a second API handler in the Security Logging API that will receive POST requests from an organization webhook when repositories are added. This would be leveraged to set security options on the new repo as well as creating an issue stating the change. Given more time, this API would write to a message queue that be picked up by a backround processor that to call the Github API to enable security features and write and issue to the repo. There are additional comments in the code on this.
 
 ## Steps to test the API
 1 Clone the code from the Github repository
